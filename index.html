@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="alert alert-info mb-5 text-center">User Crud</h1>
+
+            <div class="row">
+                <form id="myform" class="col-sm-3" method="post">
+                  <h3 class="alert alert-success text-center">Add User</h3>
+                  <div class="alert alert-success mt-2" id="msg"></div>
+                    <div>
+                      <input type="hidden"  id="stid" class="form-control" />
+                      <label for="name">Name</label>
+                      <input type="text" name="name" id="name" class="form-control" required />
+                    </div>
+                    <div>
+                      <label for="email">Email</label>
+                      <input type="email" name="email" id="email" class="form-control"  required/>
+                    </div>
+                    <div>
+                      <label for="phone">Phone</label>
+                      <input type="text" name="phone" id="phone" class="form-control"  required/>
+                    </div>
+                    <div>
+                      <label for="address">Address</label>
+                      <input type="text" name="address" id="address" class="form-control"  required/>
+                    </div>
+                    <div >
+                        <label for="address">Gender</label>
+                        <select class="form-select" required  name="catagory" id="gender" 
+                        name="gender">                          
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                          
+                        </select>
+                    </div>                     
+                    <div>
+                      <label for="address">Date of Birth</label>
+                      <input type="date" name="dob" id="dob" class="form-control" />
+                    </div>
+
+                    <div class="text-left">
+                        <button type="submit" id="btnadd" class="btn btn-primary mt-2">Submit</button>
+                        <!-- <button type="submit" class="btn btn-primary mt-2">update</button>
+                        <button type="submit" class="btn btn-primary mt-2">delete</button> -->
+                        <button type="reset" class="btn btn-primary mt-2">reset</button>
+                    </div>
+                   
+                    
+                    
+                </form>  
+                <div class="col-sm-9">
+                    <h3 class="alert alert-warning text-center">Show User</h3>
+                    Search:<input type="text" id="mytxt" onkeyup ="myfun1()" class="form-control" placeholder="Name, Phone, Email"  />
+                    <table class="table">
+                        <thead>
+                            <th scope="col">SL</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Cell</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">DOB</th>
+                            <th scope="col">Address</th>
+                        </thead>
+                        <tbody id="tbody">  
+                        </tbody>
+                             
+                    </table>
+                </div>
+            </div>
+    
+            
+   
+    
+
+    <script src="js/jQuery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/myajax.js"></script>
+  </body>
+</html>
